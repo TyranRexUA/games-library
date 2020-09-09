@@ -6,18 +6,12 @@ import { dateToString } from '../../secondaryFunctions/secondaryFunctions';
 
 const Library = ({ libraryTitle, games, isLoading }) => (
     <div className={styles.library}>
-
-        {libraryTitle &&
             <div className={styles.title}>
-                <h1>{libraryTitle}</h1>
+                <a href="https://rawg.io/apidocs">RAWG API OFFICIAL WEBSITE</a>
+            {libraryTitle && <h1>{libraryTitle}</h1>}
             </div>
-        }
 
-        <div
-            className={styles.body}
-        // style={{
-        //     gridAutoRows: `${0.5625 * ( (window.innerWidth - 95) / Math.floor( ( window.innerWidth - 95 ) / 320 ) ) + 130}px`}}
-        >
+        <div className={styles.body}>
 
             {games.map(
                 (game) => <Card

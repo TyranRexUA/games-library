@@ -7,7 +7,8 @@ const   SET_GAME_DLCs = 'gamePage/SET_GAME_DLCs',
         SET_GAME_STORES = 'gamePage/SET_GAME_STORES',
         SET_GAME_TRAILERS = 'gamePage/SET_GAME_TRAILERS',
         TOGGLE_IS_LOADING = 'gamePage/TOGGLE_IS_LOADING',
-        SET_SIMILAR_GAMES = 'gamePage/SET_SIMILAR_GAMES';
+        SET_SIMILAR_GAMES = 'gamePage/SET_SIMILAR_GAMES',
+        SET_PARENT_GAMES_FOR_DLC = 'gamePage/SET_PARENT_GAMES_FOR_DLC';
 
 const initialState = {
     isLoading: false,
@@ -18,6 +19,7 @@ const initialState = {
     stores: [],
     trailers: [],
     similarGames: [],
+    parentGameForDLC: [],
 };
 
 const gameReducer = (state = initialState, action) => {
@@ -60,7 +62,12 @@ const gameReducer = (state = initialState, action) => {
         case SET_SIMILAR_GAMES:
             return {
                 ...state,
-                similarGames: action.payload.results
+                similarGames: [...action.payload.results]
+            }
+        case SET_PARENT_GAMES_FOR_DLC:
+            return {
+                ...state,
+                parentGameForDLC: [...action.payload]
             }
         default: return state;
     }
@@ -74,7 +81,8 @@ const setGameTrailers = (payload) => ({ type: SET_GAME_TRAILERS, payload });
 const setGameStores = (payload) => ({ type: SET_GAME_STORES, payload });
 const setGameDLCs = (payload) => ({ type: SET_GAME_DLCs, payload });
 const setGameSeries = (payload) => ({ type: SET_SERIES_GAMES, payload });
-const setSimilarGames = (payload) => ({ type: SET_SIMILAR_GAMES, payload})
+const setSimilarGames = (payload) => ({ type: SET_SIMILAR_GAMES, payload});
+const setParentGameForDLC = (payload) => ({ type: SET_PARENT_GAMES_FOR_DLC, payload });
 
 export const requestGameInfo = (gameId) => {
     return async (dispatch) => {
@@ -87,6 +95,7 @@ export const requestGameInfo = (gameId) => {
             rawgAPI.getGameDLCs(gameId).then(response => dispatch(setGameDLCs(response))),
             rawgAPI.getSeriesGames(gameId).then(response => dispatch(setGameSeries(response))),
             rawgAPI.getSimilarGames(gameId).then(response => dispatch(setSimilarGames(response))),
+            rawgAPI.getParentGameForDLC(gameId).then(response => dispatch(setParentGameForDLC(response)))
         ]).then(() => dispatch(toggleIsLoadingAC(false)))
     }
 };

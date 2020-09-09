@@ -11,12 +11,9 @@ const reducers = combineReducers({
     params: paramsReducer,
     filters: filtersReducer,
     game: gameReducer,
-    //form: formReducer,
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleWare)))
-
-//const store = createStore(reducers, applyMiddleware(thunkMiddleWare));
 
 export default store;

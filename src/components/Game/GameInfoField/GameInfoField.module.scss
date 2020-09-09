@@ -17,7 +17,7 @@
             font-size: 0.86rem;
             border-radius: 5px;
             margin: 3px;
-            background: rgba($color: $mainColor, $alpha: .6);
+            background: rgba($color: $secondaryColor, $alpha: .5);
 
             &:hover {
                 box-shadow: $mainHoverShadow;
