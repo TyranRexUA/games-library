@@ -27,7 +27,6 @@ class LibraryContainer extends React.Component {
     }
 
     componentDidMount() {
-        console.log('library mount')
         this.refreshLibrary();
         window.scrollTo(0, 0);
         window.addEventListener('scroll', this.showMoreGames);
@@ -43,7 +42,6 @@ class LibraryContainer extends React.Component {
     }
 
     componentWillUnmount() {
-        console.log('Library unmount')
         window.removeEventListener('scroll', this.showMoreGames);
     }
 
