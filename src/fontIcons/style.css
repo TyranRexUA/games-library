@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?b6riqs');
+  src:  url('fonts/icomoon.eot?b6riqs#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?b6riqs') format('truetype'),
+    url('fonts/icomoon.woff?b6riqs') format('woff'),
+    url('fonts/icomoon.svg?b6riqs#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-3do:before {
+  content: "\e90a";
+  color: #fff;
+}
+.icon-android:before {
+  content: "\e90b";
+  color: #fff;
+}
+.icon-atari:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-commodore-amiga:before {
+  content: "\e90d";
+  color: #fff;
+}
+.icon-ios:before {
+  content: "\e90e";
+  color: #fff;
+}
+.icon-linux:before {
+  content: "\e90f";
+  color: #fff;
+}
+.icon-mac:before {
+  content: "\e910";
+  color: #fff;
+}
+.icon-neo-geo:before {
+  content: "\e911";
+  color: #fff;
+}
+.icon-nintendo1:before {
+  content: "\e912";
+  color: #fff;
+}
+.icon-pc:before {
+  content: "\e913";
+  color: #fff;
+}
+.icon-playstation:before {
+  content: "\e914";
+  color: #fff;
+}
+.icon-sega:before {
+  content: "\e915";
+  color: #fff;
+}
+.icon-web:before {
+  content: "\e916";
+  color: #fff;
+}
+.icon-xbox:before {
+  content: "\e917";
+  color: #fff;
+}
+.icon-apple-appstore:before {
+  content: "\e900";
+}
+.icon-epic-games:before {
+  content: "\e901";
+}
+.icon-gog:before {
+  content: "\e902";
+}
+.icon-google-play:before {
+  content: "\e903";
+}
+.icon-itch:before {
+  content: "\e904";
+}
+.icon-nintendo:before {
+  content: "\e905";
+}
+.icon-playstation-store:before {
+  content: "\e906";
+}
+.icon-xbox360:before {
+  content: "\e908";
+}
+.icon-xbox-store:before {
+  content: "\e909";
+}
+.icon-steam:before {
+  content: "\e907";
+}

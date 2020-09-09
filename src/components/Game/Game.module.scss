@@ -1,0 +1,93 @@
+@import './../../variables';
+
+.Game {
+	.content__wrapper {
+		padding: 40px 30px 40px 30px;
+		min-height: 100vh;
+
+		@media (max-width: 600px) {
+			padding: 20px 20px 30px 20px;
+		}
+
+		& > h1 {
+			margin: 0 0 40px 0;
+			font-size: 2rem;
+			color: $secondaryFontColor;
+		}
+
+		.description {
+			margin: 40px 0;
+			white-space: pre-line;
+		}
+
+		.infoBlock {
+			padding: 10px;
+			background: linear-gradient(
+				180deg,
+				rgba($color: $secondaryColor, $alpha: 0.5) 0%,
+				rgba($color: $secondaryColor, $alpha: 0) 80%
+			);
+
+			& > div {
+				margin: 20px 0;
+			}
+
+			&__row {
+
+				.row__name {
+					font-weight: 700;
+				}
+				.row__value {
+					color: $secondaryFontColor;
+					font-weight: 700;
+					margin: 0 0 0 10px;
+					font-size: 1rem;
+				}
+				a {
+					font-weight: 400 !important;
+				}
+			}
+		}
+		.row1 {
+			display: flex;
+			flex-wrap: wrap-reverse;
+
+			& > div {
+				width: 40%;
+
+				&:first-child {
+					width: 60%;
+				}
+
+				@media (max-width: 1350px) {
+					width: 100% !important;
+				}
+			}
+		}
+		.row2 {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+
+			& > div {
+				margin: 10px 0;
+				width: 49%;
+				padding: 20px;
+				background: linear-gradient(
+					180deg,
+					rgba($color: $secondaryColor, $alpha: 0.3) 0%,
+					rgba($color: $secondaryColor, $alpha: 0) 80%
+				);
+
+				@media (max-width: 600px) {
+					width: 100% !important;
+				}
+
+				@media (max-width: 400px) {
+					padding: 5px;
+				}
+			}
+		}
+	}
+}

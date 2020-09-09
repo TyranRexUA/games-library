@@ -1,0 +1,33 @@
+@import './../../../variables';
+
+.searchForm {
+	width: 100%;
+	position: relative;
+
+	.search {
+		width: 100%;
+		outline: none;
+		height: 30px;
+		border-radius: 50px;
+		padding: 5px 35px 5px 10px;
+		border: none;
+		font-weight: 700;
+		background: $secondaryColor;
+		color: $mainFontColor;
+		font-size: 1.2rem;
+
+		&::placeholder {
+			color: gray;
+		}
+	}
+	button {
+		cursor: pointer;
+		position: absolute;
+		height: 30px;
+		width: 30px;
+		right: 5px;
+		background: url(./../../../img/anotherIcons/search.svg) center / 60%  no-repeat;
+		border: none;
+		outline: none;
+	}
+}

@@ -1,0 +1,41 @@
+@import './../../../variables';
+
+.GameStores {
+
+    .header {
+        font-weight: 700;
+        margin: 0 0 5px 0;
+    }
+    .body {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            flex-wrap: nowrap;
+            text-decoration: none;
+            padding: 7px 20px;
+            display: block;
+            border-radius: 5px;
+            margin: 3px;
+            background: $secondaryColor;
+            color: $mainFontColor;
+            transition: all 0.4s;
+            box-shadow: $shadow;
+
+            span {
+                margin: 0 0 0 10px;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 2rem;
+            }
+
+            &:hover {
+                background: $mainFontColor;
+                color: $secondaryColor;
+            }
+        }
+    }
+}

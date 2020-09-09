@@ -1,0 +1,113 @@
+@import './../../variables';
+
+.Filters {
+	position: fixed;
+	width: 0;
+	height: 100vh;
+	margin-left: 30px;
+	top: 0;
+	left: 0;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	background: $mainColor;
+
+	display: flex;
+	transition: all 0.5s;
+	z-index: 50;
+
+	.body {
+		width: 100%;
+		padding: 20px 20px 20px 20px;
+		white-space: nowrap;
+	}
+
+	&__btn {
+		width: 30px;
+		height: 100%;
+		background: $secondaryColor;
+		position: fixed;
+		box-shadow: $shadow;
+		background: $secondaryColor;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+
+		img {
+			width: 20px;
+			transition: all 0.5s;
+		}
+	}
+
+	&__btn_active {
+		img {
+			transform: rotateY(180deg);
+		}
+	}
+
+	.buttonsGroup {
+		margin-top: 20px;
+		justify-content: center;
+		display: flex;
+
+		&__item {
+			display: block;
+			text-decoration: none;
+			color: $secondaryFontColor;
+			padding: 5px 10px;
+			border-radius: 5px;
+			box-shadow: $shadow;
+			background: $secondaryColor;
+			width: fit-content;
+			cursor: pointer;
+			font-weight: 700;
+			margin: 10px;
+
+			&:hover {
+				background: $mainFontColor !important;
+				color: $secondaryColor;
+			}
+		}
+	}
+}
+.active {
+	overflow-y: auto;
+	width: calc(100vw - 30px);
+}
+.Filters__btn {
+	width: 30px;
+	height: 100vh;
+	background: $secondaryColor;
+	position: fixed;
+	left: 0;
+	top: 0;
+	box-shadow: $shadow;
+	background: $secondaryColor;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	img {
+		width: 20px;
+		transition: all 0.5s;
+	}
+}
+
+.Filters__btn_active {
+	img {
+		transform: rotateY(180deg);
+	}
+}
+.homeBtn {
+	position: fixed;
+	top: 10px;
+	left: 0;
+	background: url('./../../img/anotherIcons/home.svg') center / 60% 60%
+		no-repeat;
+	//margin-top: 10px;
+	height: 30px;
+	width: 30px;
+	position: fixed;
+	z-index: 20;
+}

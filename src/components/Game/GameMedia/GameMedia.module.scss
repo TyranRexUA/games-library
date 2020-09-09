@@ -1,0 +1,44 @@
+.GameMedia {
+	max-width: 1280px;
+	margin: 0 auto;
+
+	.showcase {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 56.25%;
+		background: black;
+
+		video,
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			outline: none;
+		}
+	}
+
+	.body {
+		overflow-x: auto;
+		display: flex;
+		padding-bottom: 5px;
+
+		&__item {
+			flex-shrink: 0;
+			margin: 5px;
+			width: 100px;
+			height: 56.25px;
+			cursor: pointer;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}

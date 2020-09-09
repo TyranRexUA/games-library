@@ -1,0 +1,27 @@
+@import './../../../variables';
+
+.InfoField {
+
+    .header {
+        font-weight: 700;
+    }
+    .body {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item {
+            display: block;
+            text-decoration: none;
+            padding: 4px 5px;
+            display: block;
+            font-size: 0.86rem;
+            border-radius: 5px;
+            margin: 3px;
+            background: rgba($color: $mainColor, $alpha: .6);
+
+            &:hover {
+                box-shadow: $mainHoverShadow;
+            }
+        }
+    }
+}

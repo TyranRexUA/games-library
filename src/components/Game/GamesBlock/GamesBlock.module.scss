@@ -1,0 +1,72 @@
+@import './../../../variables';
+
+.GamesBlock {
+	max-width: fit-content;
+	margin: 40px 0 0 0;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+
+		h2 {
+			font-size: 1.25rem;
+		}
+
+		&__showMoreBtn {
+			text-decoration: none;
+			text-align: center;
+			border-radius: 5px;
+			font-weight: 700;
+			padding: 5px;
+			background: $secondaryColor !important;
+			box-shadow: $shadow;
+
+			&:hover {
+				background: $mainFontColor !important;
+				color: $secondaryColor;
+			}
+		}
+	}
+
+	.body {
+		overflow-x: auto;
+		display: flex;
+		margin-top: 10px;
+		padding-bottom: 10px;
+
+		.miniCard {
+			text-decoration: none;
+			overflow: hidden;
+			position: relative;
+			flex-shrink: 0;
+			width: 200px;
+			border-radius: 5px;
+			background: $secondaryColor;
+			border: 1px solid $mainColor;
+			padding: 5px;
+			box-shadow: $shadow;
+			font-size: 0.86rem;
+
+            &:first-child {
+                margin-left: 0;
+			}
+
+			&:hover {
+				box-shadow: $secondaryHoverShadow;
+			}
+
+			&__name {
+				padding-top: 5px;
+				color: $mainFontColor;
+			}
+
+			&__media {
+				width: 100%;
+				height: 0;
+				padding-bottom: 56.25%;
+				border-radius: 5px;
+			}
+		}
+	}
+}
