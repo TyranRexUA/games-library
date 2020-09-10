@@ -57,8 +57,8 @@ const Game = ({ name, description, released, metacritic, screenshots, trailers, 
                 <div className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />
 
                 <div className={styles.row2}>
-                    {parentGameForDLC.length > 0 && <ParentGame parentGameForDLC={parentGameForDLC} style={stores && stores.length > 0 ? {} : { width: '100%' }} />}
-                    {DLCs.length > 0  && <GameDLCs DLCs={DLCs} style={stores && stores.length > 0 ? {} : { width: '100%' }} />}
+                    {parentGameForDLC.length > 0 && <ParentGame parentGameForDLC={parentGameForDLC} />}
+                    {DLCs.length > 0 && <GameDLCs DLCs={DLCs} />}
                     {stores && stores.length > 0 && <GameStores stores={stores} style={DLCs.length > 0 || parentGameForDLC.length > 0 ? {} : {width: '100%'} } />}
 
                 </div>
