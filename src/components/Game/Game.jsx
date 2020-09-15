@@ -64,7 +64,7 @@ const Game = ({ name, description, released, metacritic, screenshots, trailers, 
                 </div>
 
                 {series.length > 0
-                    && <GamesBlock games={series} currentGameId={props.currentGameId} title={'Games in Series'} type={'series'} />
+                    && <GamesBlock games={series} title={'Games in Series'} />
                 }
 
             </div>

@@ -55,7 +55,7 @@ const rawgAPI = {
     },
     getSeriesGames(gameId) {
         return instance.get(`games/${gameId}/game-series`).then(response => {
-            return response.data;
+            return this._getAllItems(response.data)
         })
     },
 

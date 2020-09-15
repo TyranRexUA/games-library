@@ -3,18 +3,18 @@ import { NavLink } from 'react-router-dom';
 import styles from './GamesBlock.module.scss'
 //import { cutTextLength } from '../../../secondaryFunctions/secondaryFunctions';
 
-const GamesBlock = ({ games, currentGameId, title, type }) => (
+const GamesBlock = ({ games, title, ...props }) => (
     <div className={styles.GamesBlock}>
 
         <div className={styles.header}>
             <h2>{title}</h2>
-            <NavLink
+            {/* <NavLink
                 className={styles.header__showMoreBtn}
-                to={type === 'similar' ? `/similar/${currentGameId}` : `/series/${currentGameId}`}
+                to={props.type === 'similar' ? `/similar/${props.currentGameId}` : `/series/${props.currentGameId}`}
                 style={{ background: `gray` }}
             >
                 Full List
-                </NavLink>
+                </NavLink> */}
         </div>
 
         <div className={styles.body}>
