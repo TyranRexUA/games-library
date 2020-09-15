@@ -7,7 +7,7 @@ import GameDLCs from './GameDLCs/GameDLCs';
 import GameStores from './GameStores/GameStores';
 import ParentGame from './ParentGame/ParentGame';
 
-const Game = ({ name, description, released, metacritic, screenshots, trailers, platforms, genres, stores, tags, similarGames, series, publishers, developers, DLCs, gameWebsite, parentGameForDLC, ...props}) => {
+const Game = ({ name, description, released, metacritic, screenshots, trailers, platforms, genres, stores, tags, similarGames, series, publishers, developers, DLCs, gameWebsite, parentGame, ...props}) => {
 
     const isMedia = (screenshots.length > 0 || trailers.length > 0)
 
@@ -57,9 +57,9 @@ const Game = ({ name, description, released, metacritic, screenshots, trailers, 
                 <div className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />
 
                 <div className={styles.row2}>
-                    {parentGameForDLC.length > 0 && <ParentGame parentGameForDLC={parentGameForDLC} />}
+                    {parentGame.length > 0 && <ParentGame parentGame={parentGame} />}
                     {DLCs.length > 0 && <GameDLCs DLCs={DLCs} />}
-                    {stores && stores.length > 0 && <GameStores stores={stores} style={DLCs.length > 0 || parentGameForDLC.length > 0 ? {} : {width: '100%'} } />}
+                    {stores && stores.length > 0 && <GameStores stores={stores} style={DLCs.length > 0 || parentGame.length > 0 ? {} : {width: '100%'} } />}
 
                 </div>
 

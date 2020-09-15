@@ -112,7 +112,7 @@ const rawgAPI = {
             return this._getAllItems(response.data)
         }).then(response => response.results)
     },
-    getParentGameForDLC(gameId) {
+    getParentGame(gameId) {
         return instance.get(`games/${gameId}/parent-games`).then(response => {
             return this._getAllItems(response.data)
         }).then(response => response.results)
