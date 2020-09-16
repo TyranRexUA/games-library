@@ -36,12 +36,13 @@
 
 				.row__name {
 					font-weight: 700;
+					margin: 0 10px 0 0;
 				}
 				.row__value {
 					color: $secondaryFontColor;
 					font-weight: 700;
-					margin: 0 0 0 10px;
 					font-size: 1rem;
+					word-wrap: break-word;
 				}
 				a {
 					font-weight: 400 !important;

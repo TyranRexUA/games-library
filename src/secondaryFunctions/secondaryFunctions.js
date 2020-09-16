@@ -45,11 +45,11 @@ export const fromSlugToName = (slug) => {
     return slug.match(/\b\w+/g).map(item => item[0].toUpperCase() + item.slice(1)).join(' ');
 }
 export const cutTextLength = (text, length) => {
-    let newText = text.split('').splice(0, length).join('');
-    if (newText.length > length && newText.length > length - 3) {
+    //let newText = text.split('').splice(0, length).join('');
+    if (text.length > length && text.length > length - 3) {
         return text.split('').splice(0, length-3).join('') + '...';
     }
-    return newText;
+    return text;
 }
 export const fromDatesValuesToString = (DatesValues) => {
     return [...new Set(DatesValues.match(/\b\d\d\d\d\b/g)).keys()].join(" - ");
