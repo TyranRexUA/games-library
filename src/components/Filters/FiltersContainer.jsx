@@ -63,14 +63,12 @@ class FiltersContainer extends React.Component {
             } else {
                 document.body.classList.add('lock')
             }
-            //document.documentElement.classList.add('lock')
         } else {
             if (isMobile()) {
                 document.body.classList.remove('lockMobile')
             } else {
                 document.body.classList.remove('lock');
             }
-            //document.documentElement.classList.remove('lock')
         }
         this.setState({ isActive })
     }

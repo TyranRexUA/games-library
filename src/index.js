@@ -7,14 +7,9 @@ import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/redux-store';
 
-
-// let vh = window.innerHeight * 0.01;
-// document.documentElement.style.setProperty('--vh', `${vh}px`);
 document.documentElement.style.setProperty('--gridAutoRows', `${0.5625 * ((window.innerWidth - 95) / Math.floor((window.innerWidth - 95) / 315)) + 130}px`);
 
 window.addEventListener('resize', () => {
-    // let vh = window.innerHeight * 0.01;
-    // document.documentElement.style.setProperty('--vh', `${vh}px`);
     document.documentElement.style.setProperty('--gridAutoRows', `${0.5625 * ((window.innerWidth - 95) / Math.floor((window.innerWidth - 95) / 315)) + 130}px`);
 })
 
@@ -29,9 +24,6 @@ ReactDOM.render(
   ,
   document.getElementById('root')
 );
-
-// render();
-// store.subscribe(() => render());
 
 
 // If you want your app to work offline and load faster, you can change

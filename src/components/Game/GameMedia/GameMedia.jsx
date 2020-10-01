@@ -12,10 +12,6 @@ const GameMedia = (props) => {
 
                 {
                     (mediaType === 'mp4' &&
-                        // <video autoPlay controls>
-                        //     <source src={mediaSrc[0]} type="video/mp4" />
-                        //     <source src={mediaSrc[1]} type="video/mp4" />
-                        // </video>
                         <video autoPlay controls src={mediaSrc[0]}>
                             <source src={mediaSrc[1]} type="video/mp4" />
                         </video>
@@ -53,7 +49,6 @@ const GameMedia = (props) => {
                     />
                 )}
                 {props.screenshots.map(screen =>
-                    // <img key={screen.image} src={screen.image} width='100' height='56' alt='' />
                     <div
                         className={styles.body__item}
                         key={screen.image}

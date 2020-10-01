@@ -21,12 +21,10 @@ const gamesReducer = (state = initialState, action) => {
         case SET_GAMES:
             return {...state,
                 games: [...action.payload.results],
-                // next: action.payload.next,
                 count: action.payload.count };
         case ADD_GAMES:
             return {...state,
                 games: [...state.games, ...action.payload.results],
-                // next: action.payload.next
             };
         case TOGGLE_IS_LOADING:
             return {...state,

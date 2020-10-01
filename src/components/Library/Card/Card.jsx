@@ -28,14 +28,6 @@ const Card = ({ screenshots, parentPlatforms, metacritic, released, genres, tags
                     </div>
                 }
 
-                {/* {parentPlatforms
-                && <div className={styles.info__platforms}>
-                    {parentPlatforms.map(
-                        (parentPlatform, index) => <span className={`icon-${parentPlatform}`} key={index} />
-                    )}
-                </div>
-            } */}
-
                 {metacritic &&
                     <div className={styles.info__metacritic}>
                         {metacritic}

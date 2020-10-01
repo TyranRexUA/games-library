@@ -9,14 +9,12 @@ import { dateToString } from '../../secondaryFunctions/secondaryFunctions';
 
 class GameContainer extends React.Component {
     componentDidMount() {
-        //window.scrollTo(0, 0);
         this.props.requestGameInfo(this.props.match.params.gameId)
     }
 
     componentDidUpdate(prevProps) {
         const wasChanged = this.props.location !== prevProps.location;
         if (wasChanged) {
-            //window.scrollTo(0, 0);
             this.props.requestGameInfo(this.props.match.params.gameId)
         }
     }
