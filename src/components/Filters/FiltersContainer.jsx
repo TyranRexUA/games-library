@@ -36,7 +36,6 @@ class FiltersContainer extends React.Component {
     }
 
     componentWillUnmount() {
-        console.log('Filters Unmount')
         window.removeEventListener('unhandledrejection', this.toHomePage)
     }
 
