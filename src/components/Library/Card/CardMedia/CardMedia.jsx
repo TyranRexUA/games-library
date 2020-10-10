@@ -39,7 +39,7 @@ const CardMedia = ({ screenshots, isHover, clip, imageSrc, ...props }) => {
 
                     {/* КАРТИНКА СО ЗНАЧКОМ ПРОИГРЫВАНИЯ */}
                     <div className={cn(styles.background, { [styles.hidden]: isHover })}
-                        style={{ background: `url(${require(`./../../../../img/anotherIcons/play.svg`)}) 5% 95% / 10% no-repeat, url(${imageSrc}) 50% 0 / cover no-repeat` }} alt="" />
+                        style={{ background: `url(${require(`./../../../../img/anotherIcons/play.svg`)}) 5% 95% / 10% no-repeat, url(${imageSrc}) 50% 0 / cover no-repeat` }} />
                 </>
 
                 : <>
@@ -63,7 +63,7 @@ const CardMedia = ({ screenshots, isHover, clip, imageSrc, ...props }) => {
                     }
 
                     {/* КАРТИНКА БЕЗ ЗНАЧКА ПРОИГРОВАНИЯ */}
-                    <div className={cn(styles.background, { [styles.hidden]: isHover && isHover && screenshots.length > 2 })} style={{ background: `url(${imageSrc}) 50% 0 / cover no-repeat` }} alt="" />
+                    <div className={cn(styles.background, { [styles.hidden]: isHover && isHover && screenshots.length > 2 })} style={{ background: `url(${imageSrc}) 50% 0 / cover no-repeat` }} />
                 </>
             }
 
