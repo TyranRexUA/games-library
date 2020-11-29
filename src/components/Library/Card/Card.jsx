@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
 // import preloader from './../../../img/preloader/preloader.svg';
 import styles from './Card.module.scss';
@@ -43,4 +43,4 @@ const Card = ({ screenshots, parentPlatforms, metacritic, released, genres, tags
         </div>
     )
 }
-export default memo(Card);
+export default React.memo(Card);

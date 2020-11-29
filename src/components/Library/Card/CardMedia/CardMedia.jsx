@@ -72,4 +72,4 @@ const CardMedia = ({ screenshots, isHover, clip, imageSrc, ...props }) => {
 };
 
 
-export default CardMedia;
+export default React.memo(CardMedia);

@@ -73,4 +73,4 @@ const Game = ({ name, description, released, metacritic, screenshots, trailers, 
     )
 }
 
-export default Game;
+export default React.memo(Game);

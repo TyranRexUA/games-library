@@ -32,4 +32,4 @@ const CardHiddenInfo = ({ released, genres, gameId, ...props }) => (
 );
 
 
-export default CardHiddenInfo;
+export default React.memo(CardHiddenInfo);

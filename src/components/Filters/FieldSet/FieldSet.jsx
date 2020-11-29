@@ -144,4 +144,4 @@ const FieldSet = ({ title, items, activeItem, isLoading, next, filtersIsActive, 
     );
 };
 
-export default FieldSet;
+export default React.memo(FieldSet);

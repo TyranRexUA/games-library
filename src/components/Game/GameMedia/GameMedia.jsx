@@ -68,4 +68,4 @@ const GameMedia = (props) => {
     )
 }
 
-export default GameMedia;
+export default React.memo(GameMedia);

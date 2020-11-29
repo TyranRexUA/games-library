@@ -34,4 +34,4 @@ const GameInfoBlock = ({items, paramName}) => {
     )
 }
 
-export default GameInfoBlock;
+export default React.memo(GameInfoBlock);

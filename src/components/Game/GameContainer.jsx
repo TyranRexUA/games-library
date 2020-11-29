@@ -7,7 +7,7 @@ import { requestGameInfo } from '../../redux/gameReducer';
 import CardPage from './Game';
 import { dateToString } from '../../secondaryFunctions/secondaryFunctions';
 
-class GameContainer extends React.Component {
+class GameContainer extends React.PureComponent {
     componentDidMount() {
         this.props.requestGameInfo(this.props.match.params.gameId)
     }

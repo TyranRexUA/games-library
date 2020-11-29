@@ -12,4 +12,4 @@ const SearchForm = ({ searchLink, setSearchParams, searchValue }) => (
     </form>
 );
 
-export default SearchForm;
+export default React.memo(SearchForm);

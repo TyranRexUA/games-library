@@ -50,4 +50,4 @@ const Library = ({ libraryTitle, games, isLoading }) => (
     </div>
 );
 
-export default Library;
+export default React.memo(Library);

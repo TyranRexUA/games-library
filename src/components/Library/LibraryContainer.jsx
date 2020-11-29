@@ -7,7 +7,7 @@ import { compose } from 'redux';
 import Preloader from '../Preloader/Preloader';
 import { fromURLtoObj } from '../../secondaryFunctions/secondaryFunctions';
 
-class LibraryContainer extends React.Component {
+class LibraryContainer extends React.PureComponent {
     refreshLibrary = () => {
         if (this.props.match.params.gameId) {
             this.props.requestSimilarGames(this.props.match.params.gameId).then(()=> {

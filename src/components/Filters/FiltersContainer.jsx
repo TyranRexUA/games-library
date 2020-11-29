@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import { fromURLtoObj, fromObjToURL, isMobile } from '../../secondaryFunctions/secondaryFunctions';
 
-class FiltersContainer extends React.Component {
+class FiltersContainer extends React.PureComponent {
     state = {
         isActive: false
     }
@@ -24,7 +24,7 @@ class FiltersContainer extends React.Component {
             this.props.setParamsAC(fromURLtoObj(this.props.match.params.data))
         }
 
-        window.addEventListener('unhandledrejection', this.toHomePage)
+        window.addEventListener('unhandledrejection', this.to404Page)
     };
 
     componentDidUpdate(prevProps, prevState) {
@@ -36,11 +36,11 @@ class FiltersContainer extends React.Component {
     }
 
     componentWillUnmount() {
-        window.removeEventListener('unhandledrejection', this.toHomePage)
+        window.removeEventListener('unhandledrejection', this.to404Page)
     }
 
-    toHomePage = () => {
-        this.props.history.push('/404');
+    to404Page = (e) => {
+        if (e.reason.response.status === 404) this.props.history.push('/404');
     }
 
     setSearchParams = (event) => {

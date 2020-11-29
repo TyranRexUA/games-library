@@ -37,4 +37,4 @@ const GamesBlock = ({ games, title, ...props }) => (
 );
 
 
-export default GamesBlock;
+export default React.memo(GamesBlock);

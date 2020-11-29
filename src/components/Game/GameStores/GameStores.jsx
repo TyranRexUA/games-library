@@ -8,11 +8,13 @@ const GameStores = ({ stores, ...props }) => (
             </div>
         <div className={styles.body}>
             {stores.map(store =>
-                (<a key={store.id} className={styles.body__item} rel='noopener noreferrer' target='_blank' href={store.url}>{store.store.name} <span className={`icon-${store.store.slug}`}></span></a>)
+                (<a key={store.id} className={styles.body__item} rel='noopener noreferrer' target='_blank' href={store.url}>
+                    {store.store.name} <span className={`icon-${store.store.slug}`}></span>
+                </a>)
             )}
         </div>
     </div>
 );
 
 
-export default GameStores;
+export default React.memo(GameStores);
