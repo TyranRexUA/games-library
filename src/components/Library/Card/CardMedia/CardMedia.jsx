@@ -63,7 +63,7 @@ const CardMedia = ({ screenshots, isHover, clip, imageSrc, ...props }) => {
                     }
 
                     {/* КАРТИНКА БЕЗ ЗНАЧКА ПРОИГРОВАНИЯ */}
-                    <div className={cn(styles.background, { [styles.hidden]: isHover && isHover && screenshots.length > 2 })} style={{ background: `url(${imageSrc}) 50% 0 / cover no-repeat` }} />
+                    <div className={cn(styles.background, { [styles.hidden]: isHover && screenshots.length > 2 })} style={{ background: `url(${imageSrc}) 50% 0 / cover no-repeat` }} />
                 </>
             }
 

@@ -23,7 +23,7 @@ const CardHiddenInfo = ({ released, genres, gameId, ...props }) => (
             </div>
         }
 
-        <NavLink className={styles.showMoreButton} to={`/similar/${gameId}`} >Show more like this</NavLink>
+        {/* <NavLink className={styles.showMoreButton} to={`/similar/${gameId}`} >Show more like this</NavLink> */}
 
         {/* {props.tags &&
                 <div>Tags: {props.tags.map((tag, index) => index === 0 ? `${tag} ` : `/ ${tag} `)}</div>

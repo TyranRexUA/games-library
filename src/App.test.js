@@ -1,9 +1,21 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './App';
+import NotFound404 from './components/NotFound404/NotFound404';
+import { HashRouter } from 'react-router-dom';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('NotFound404', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = render(
+      <HashRouter >
+        <NotFound404 />
+      </HashRouter>
+    );
+  });
+
+  test('number one', () => {
+    const { asFragment } = wrapper
+    expect(wrapper).toMatchSnapshot()
+  })
 });

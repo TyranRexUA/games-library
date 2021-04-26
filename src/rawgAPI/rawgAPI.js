@@ -1,9 +1,11 @@
 import axios from 'axios';
 
 const instance = axios.create({
-    baseURL: 'https://api.rawg.io/api/',
+    baseURL: 'https://api.rawg.io/api',
     withCredentials: false,
 })
+
+const key = 'key=867fb33d94c44750aa4a66abc128f6c8&';
 
 const rawgAPI = {
     _getAllItems (data) {
@@ -41,7 +43,7 @@ const rawgAPI = {
     //     }
 
     getGames(params) {
-        return instance.get('games', {
+        return instance.get(`games?${key}`, {
             params
             //params: { ...params, exclude_additions: true}
         }).then(response => {
@@ -49,71 +51,71 @@ const rawgAPI = {
         })
     },
 
-    getSimilarGames(gameId) {
-        return instance.get(`games/${gameId}/suggested`).then(response => {
-            return response.data})
-    },
+    // getSimilarGames(gameId) {
+    //     return instance.get(`games/${gameId}/suggested?${key}`).then(response => {
+    //         return response.data})
+    // },
     getSeriesGames(gameId) {
-        return instance.get(`games/${gameId}/game-series`).then(response => {
+        return instance.get(`games/${gameId}/game-series?${key}`).then(response => {
             return this._getAllItems(response.data)
         })
     },
 
     getPlatforms() {
-        return instance.get('platforms?page_size=40').then(response => {
+        return instance.get(`platforms?${key}page_size=40`).then(response => {
             return this._getAllItems(response.data);
         })
     },
     getGenres() {
-        return instance.get('genres?page_size=40').then(response => {
+        return instance.get(`genres?${key}page_size=40`).then(response => {
             return this._getAllItems(response.data);
         })
     },
     getStores() {
-        return instance.get('stores?page_size=40').then(response => {
+        return instance.get(`stores?${key}page_size=40`).then(response => {
             return this._getAllItems(response.data);
         })
     },
     getTags() {
-        return instance.get('tags?page_size=40').then(responde => responde.data)
+        return instance.get(`tags?${key}page_size=40`).then(responde => responde.data)
     },
     getPublishers() {
-        return instance.get('publishers?page_size=40').then(responde => responde.data)
+        return instance.get(`publishers?${key}page_size=40`).then(responde => responde.data)
     },
     getDevelopers() {
-        return instance.get('developers?page_size=40').then(responde => responde.data)
+        return instance.get(`developers?${key}page_size=40`).then(responde => responde.data)
     },
     getYears() {
-        return instance.get('games').then(response =>{
+        return instance.get(`games?${key}`).then(response =>{
             return response.data.filters.years
         })
     },
 
     getGameDetails(gameId) {
-        return instance.get(`games/${gameId}`).then(response => response.data)
+        return instance.get(`games/${gameId}?${key}`).then(response => response.data)
     },
     getGameScreenshots(gameId) {
-        return instance.get(`games/${gameId}/screenshots`).then(response => {
+        return instance.get(`games/${gameId}/screenshots?${key}`).then(response => {
             return this._getAllItems(response.data)
         }).then(response => response.results)
     },
     getGameTrailers(gameId) {
-        return instance.get(`games/${gameId}/movies`).then(response => {
+        return instance.get(`games/${gameId}/movies?${key}`).then(response => {
             return this._getAllItems(response.data)
         }).then(response => response.results)
     },
     getGameStores(gameId) {
-        return instance.get(`games/${gameId}/stores`).then(response => {
+        return instance.get(`games/${gameId}/stores?${key}`).then(response => {
             return this._getAllItems(response.data)
         }).then(response => response.results)
     },
     getGameDLCs(gameId) {
-        return instance.get(`games/${gameId}/additions`).then(response => {
+        return instance.get(`games/${gameId}/additions?${key}`).then(response => {
             return this._getAllItems(response.data)
         }).then(response => response.results)
     },
     getParentGame(gameId) {
-        return instance.get(`games/${gameId}/parent-games`).then(response => {
+        return instance.get(`games/${gameId}/parent-games?${key}`).then(response => {
             return this._getAllItems(response.data)
         }).then(response => response.results)
     },

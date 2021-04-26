@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import { requestGameInfo } from '../../redux/gameReducer';
-//import Preloader from '../Preloader/Preloader';
+import Preloader from '../Preloader/Preloader';
 import CardPage from './Game';
 import { dateToString } from '../../secondaryFunctions/secondaryFunctions';
 
@@ -21,7 +21,7 @@ class GameContainer extends React.PureComponent {
 
     render() {
         return this.props.isLoading
-            ? <div />
+            ? <Preloader style={{height: '100vh'}}/>
             : <CardPage
                 currentGameId={this.props.match.params.gameId}
                 name={this.props.details && this.props.details.name}
@@ -32,7 +32,7 @@ class GameContainer extends React.PureComponent {
                 imageSrcAdd={this.props.details && this.props.details.background_image_additional}
                 screenshots={this.props.screenshots}
                 trailers={this.props.trailers}
-                similarGames={this.props.similarGames}
+                //similarGames={this.props.similarGames}
                 series={this.props.series}
                 DLCs={this.props.DLCs}
                 gameWebsite={this.props.details && this.props.details.website}

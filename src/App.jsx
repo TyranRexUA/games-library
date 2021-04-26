@@ -19,14 +19,14 @@ const App = (props) => {
         <div className='appContainer'>
             <Switch>
                 <Route exact path='/' render={() => mainBody} />
-                <Route path='/similar/:gameId' render={() => mainBody} />
+                {/* <Route path='/similar/:gameId' render={() => mainBody} /> */}
                 <Route path='/series/:gameIdSeries' render={() => mainBody} />
                 <Route path='/filter/:data' render={() => mainBody} />
                 <Route path='/game/:gameId' render={() =>
 
                     <>
                         <GameContainer />
-                        <LibraryContainer />
+                        {/* <LibraryContainer /> */}
                         <FiltersContainer />
                     </>
 

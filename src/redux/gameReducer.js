@@ -94,7 +94,7 @@ export const requestGameInfo = (gameId) => {
             rawgAPI.getGameStores(gameId).then(response => dispatch(setGameStores(response))),
             rawgAPI.getGameDLCs(gameId).then(response => dispatch(setGameDLCs(response))),
             rawgAPI.getSeriesGames(gameId).then(response => dispatch(setGameSeries(response))),
-            rawgAPI.getSimilarGames(gameId).then(response => dispatch(setSimilarGames(response))),
+            //rawgAPI.getSimilarGames(gameId).then(response => dispatch(setSimilarGames(response))),
             rawgAPI.getParentGame(gameId).then(response => dispatch(setParentGame(response)))
         ]).then(() => dispatch(toggleIsLoadingAC(false)))
     }
