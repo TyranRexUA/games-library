@@ -43,6 +43,7 @@ class GameContainer extends React.PureComponent {
                 publishers={this.props.details && this.props.details.publishers}
                 developers={this.props.details && this.props.details.developers}
                 parentGame={this.props.parentGame}
+                storesLink={this.props.storesLink}
             />
     }
 }
@@ -55,7 +56,8 @@ const mapStateToProps = (state) => ({
     similarGames: state.game.similarGames,
     series: state.game.series,
     DLCs: state.game.DLCs,
-    parentGame: state.game.parentGame
+    parentGame: state.game.parentGame,
+    storesLink: state.game.stores
 });
 
 export default compose(

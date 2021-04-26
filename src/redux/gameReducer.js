@@ -81,7 +81,7 @@ const setGameTrailers = (payload) => ({ type: SET_GAME_TRAILERS, payload });
 const setGameStores = (payload) => ({ type: SET_GAME_STORES, payload });
 const setGameDLCs = (payload) => ({ type: SET_GAME_DLCs, payload });
 const setGameSeries = (payload) => ({ type: SET_SERIES_GAMES, payload });
-const setSimilarGames = (payload) => ({ type: SET_SIMILAR_GAMES, payload});
+//const setSimilarGames = (payload) => ({ type: SET_SIMILAR_GAMES, payload});
 const setParentGame = (payload) => ({ type: SET_PARENT_GAMES_FOR_DLC, payload });
 
 export const requestGameInfo = (gameId) => {
