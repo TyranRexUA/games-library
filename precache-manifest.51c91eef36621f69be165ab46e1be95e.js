@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b1380e87c0b89e5e7c26707a6b49000e",
+    "revision": "97e62b0b7a6aaa0271e7b8d8f5d9fc0f",
     "url": "./index.html"
   },
   {
-    "revision": "6e3414a86e61f0221046",
-    "url": "./static/css/main.4d628d62.chunk.css"
+    "revision": "84f02cb4ced8f815a5b7",
+    "url": "./static/css/main.072485ed.chunk.css"
   },
   {
     "revision": "3ba68bbddb93b31cc533",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/js/2.57d0d0be.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6e3414a86e61f0221046",
-    "url": "./static/js/main.7f4272b4.chunk.js"
+    "revision": "84f02cb4ced8f815a5b7",
+    "url": "./static/js/main.896150a8.chunk.js"
   },
   {
     "revision": "ca94efbf2b856204e691",
@@ -32,12 +32,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/android.0f4b6325.svg"
   },
   {
-    "revision": "09c319e8a401dee48ddcf129d7b601e5",
-    "url": "./static/media/arrow-right-black.09c319e8.svg"
+    "revision": "49afd44df01283c61f7cac2b1950d783",
+    "url": "./static/media/arrow-right-black.49afd44d.svg"
   },
   {
-    "revision": "c9c64155178528c13fef7e4f88b0e963",
-    "url": "./static/media/arrow-right.c9c64155.svg"
+    "revision": "69cc0fa8a44a08f2ef6ec3bd39af2c93",
+    "url": "./static/media/arrow-right.69cc0fa8.svg"
   },
   {
     "revision": "a5148573af1dc7d62dfe98916f440529",
